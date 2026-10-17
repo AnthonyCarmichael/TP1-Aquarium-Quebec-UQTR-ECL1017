@@ -2,7 +2,6 @@
 **UQTR ECL1017 - Écoinformatique**
 
 Auteur : Anthony Carmichael
-
 Repo Github : https://github.com/AnthonyCarmichael/TP1-Aquarium-Quebec-UQTR-ECL1017
 
 ## Description
