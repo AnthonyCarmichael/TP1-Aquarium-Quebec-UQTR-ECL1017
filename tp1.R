@@ -11,7 +11,7 @@ library(dplyr)
 library(readxl)
 library(lubridate)
 
-# Permet de dynamiquement set le working selon l'emplacement du ficher du scrip
+# Permet de dynamiquement set le working dir selon l'emplacement du ficher du scrip
 # Source - https://stackoverflow.com/a/47045368
 # Posted by user2554330
 # Retrieved 2026-10-17, License - CC BY-SA 3.0
