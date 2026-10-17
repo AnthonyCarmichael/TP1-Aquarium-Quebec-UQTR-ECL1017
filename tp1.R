@@ -9,11 +9,14 @@
 # included libs
 library(dplyr)
 library(readxl)
-library(skimr)
-library(tidyverse)
-library(janitor)
-library(writexl)
 library(lubridate)
+
+# Permet de dynamiquement set le working selon l'emplacement du ficher du scrip
+# Source - https://stackoverflow.com/a/47045368
+# Posted by user2554330
+# Retrieved 2026-10-17, License - CC BY-SA 3.0
+dir <- dirname(rstudioapi::getSourceEditorContext()$path)
+setwd(dir)
 
 # load data
 dat = read_xlsx("./data/aquarium.xlsx")
@@ -63,7 +66,6 @@ arrSpeciesObserved1980AQ <- dataAQ |>
   summarise(organismQuantity = sum(organismQuantity)) |>
   arrange(desc(organismQuantity))
 
-
 # Q7 : Quelle espèce était la plus abondante avant 1980
 q07_espece_most_1980_AQ <- dataAQ |>
   filter(annee < 1980) |>
@@ -104,4 +106,3 @@ q10_most_individus_fam <- dataAQ |>
   group_by(famille) |>
   summarise(mean = mean(organismQuantity)) |>
   filter(mean == max(mean))
-  
